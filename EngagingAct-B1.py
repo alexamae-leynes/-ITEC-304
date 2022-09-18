@@ -36,7 +36,7 @@ def hello():
         </body></html>
         """
 @app.route('/message')
-def time():
+def message():
     return """
         <html>
         <style>
