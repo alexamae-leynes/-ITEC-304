@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 id="title">{% block title %} Grid {% endblock %}</h1>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Bolinas-Activity6</title>
+    </head>
+    <body>
+    <style>
+    .g1 {grid-area: head;}
+    .g2 {grid-area: row;}
+    .g3 {grid-area: left;}
+    .g4 {grid-area: right;}
+    .g5 {grid-area: lefts;}
+    .g6 {grid-area: rights;}
+    .g7 {grid-area: leftss;}
+    .g8 {grid-area: rightss;}
+    .g9 {grid-area: rightsss;}
+    .g10 {grid-area: foot;}
+    
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'head head head head'
+        'row left right right'
+        'row lefts lefts rights'
+        'row leftss rightss rightsss'
+        'row foot foot foot';
+      gap: 3px;
+      background-color: #FFF;
+    }
+    .grid-container > div {
+      background-color: #008000;
+      color: #FFF;
+      text-align: left;
+      padding-top: 2px;
+      padding-left: 2px;
+      padding-bottom: 25px;
+      font-size: 20px;
+    }
+    </style>
+    <div class="grid-container">
+      <div class="g1">1</div>
+      <div class="g2">2</div>
+      <div class="g3">3</div>  
+      <div class="g4">4</div>
+      <div class="g5">5</div>
+      <div class="g6">6</div>
+      <div class="g7">7</div>
+      <div class="g8">8</div>
+      <div class="g9">9</div>
+      <div class="g10">10</div>
+    </div>
+    </body>
+    </html>
+
+{% endblock %}
